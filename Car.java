@@ -7,6 +7,7 @@ public class Car {
     public static int counter = 0;
 
     Car(String brand) {
+        System.out.println("Hello from Dmytro!");
         this.brand = brand;
         counter++;
     }
