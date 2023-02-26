@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="First run">
+        <classes>
+            <class name="Calculation">
+                <methods>
+                    <include name="division"/>
+                </methods>
+            </class>
+            <parameter name="Preparations" value="Data is being prepared. Testing will start in 5 seconds."/>
+        </classes>
+    </test>
+</suite>
