@@ -22,8 +22,11 @@ public class PrintElementsInfoTest {
         JavascriptExecutor jse = ((JavascriptExecutor) driver);
         driver.get("https://rozetka.com.ua");
 
-        jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        do {
+            jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+            driver.findElements(By.xpath("//rz-goods-sections//section[@class='main-goods ng-star-inserted']"));
+        }
+        while(driver.findElements(By.xpath("//rz-goods-sections//section[@class='main-goods ng-star-inserted']")).size() < 10);
 
         List<WebElement> mostDiscussedProducts = driver.findElements(By.xpath("//h2[text()=' Найбільш обговорювані товари ']/following-sibling::ul/li"));
 
