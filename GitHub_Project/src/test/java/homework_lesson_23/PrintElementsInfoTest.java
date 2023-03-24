@@ -1,4 +1,4 @@
-package HomeworkLesson23;
+package homework_lesson_23;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -21,10 +21,10 @@ public class PrintElementsInfoTest {
         driver.manage().window().maximize();
         JavascriptExecutor jse = ((JavascriptExecutor) driver);
         driver.get("https://rozetka.com.ua");
-        
-        while (driver.findElements(By.xpath("//h2[text()=' Найбільш обговорювані товари ']/following-sibling::ul/li")).size() == 0) {
-            jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        }
+
+       while (driver.findElements(By.xpath("//h2[text()=' Найбільш обговорювані товари ']/following-sibling::ul/li")).size() == 0) {
+           jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+       }
 
         List<WebElement> mostDiscussedProducts = driver.findElements(By.xpath("//h2[text()=' Найбільш обговорювані товари ']/following-sibling::ul/li"));
 
