@@ -17,22 +17,9 @@ public class ShoppingCartPage extends BasePage {
         super(driver);
     }
 
-    public void checkItemsQuantity() {
-        Assert.assertEquals(purchases.size(), getProductsCount());
+    public List<WebElement> getPurchases() {
+        return this.purchases;
     }
 
-
-    public void checkShoppingCartContent() {
-        List<String> purchasesTitles = new ArrayList<>();
-        String productsStr = BaseTest.getProp();
-        List<String> productsForSearch = new ArrayList<>(Arrays.asList(productsStr.split(",")));
-        for (WebElement e : purchases) {
-            purchasesTitles.add(e.getAttribute("title"));
-        }
-
-        for (int i = 0; i < purchasesTitles.size(); i++) {
-            Assert.assertTrue(purchasesTitles.get(i).contains(productsForSearch.get(productsForSearch.size() - (i + 1))));
-        }
-    }
 
 }

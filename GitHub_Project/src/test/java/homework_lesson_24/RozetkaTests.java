@@ -1,5 +1,7 @@
 package homework_lesson_24;
 
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -20,8 +22,15 @@ public class RozetkaTests extends BaseTest {
                 productDetailsPage.addToCartAndContinue();
             } else {
                 ShoppingCartPage shoppingCartPage = productDetailsPage.addToCart();
-                shoppingCartPage.checkItemsQuantity();
-                shoppingCartPage.checkShoppingCartContent();
+                Assert.assertEquals(shoppingCartPage.getPurchases().size(), shoppingCartPage.getProductsCount());
+
+                List<String> purchasesTitles = new ArrayList<>();
+                for (WebElement e : shoppingCartPage.getPurchases()) {
+                    purchasesTitles.add(e.getAttribute("title"));
+                }
+                for (int j = 0; j < purchasesTitles.size(); j++) {
+                    Assert.assertTrue(purchasesTitles.get(j).contains(productsForSearch.get(productsForSearch.size() - (j + 1))));
+                }
             }
         }
     }
