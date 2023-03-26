@@ -18,7 +18,7 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public List<WebElement> getPurchases() {
-        return this.purchases;
+        return purchases;
     }
 
 

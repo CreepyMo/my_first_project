@@ -22,6 +22,7 @@ public class RozetkaTests extends BaseTest {
                 productDetailsPage.addToCartAndContinue();
             } else {
                 ShoppingCartPage shoppingCartPage = productDetailsPage.addToCart();
+
                 Assert.assertEquals(shoppingCartPage.getPurchases().size(), shoppingCartPage.getProductsCount());
 
                 List<String> purchasesTitles = new ArrayList<>();
