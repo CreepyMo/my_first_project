@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RozetkaTests extends BaseTest {
-    @Test
+    @Test(invocationCount = 3)
     public void simpleTest() {
         String productsStr = getProp();
         List<String> productsForSearch = new ArrayList<>(Arrays.asList(productsStr.split(",")));
