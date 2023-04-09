@@ -2,7 +2,6 @@ package homework_lesson_27;
 
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
-import net.minidev.json.JSONUtil;
 import org.testng.annotations.Test;
 
 import javax.sound.midi.Soundbank;
@@ -73,14 +72,11 @@ public class APITests {
             }
         }
 
-
         // Вивести на екран name в якого значення lng найбільше
         System.out.println("\nВивести на екран name в якого значення lng найбільше");
 
         String maxLngStr = jsonPath.getString("address.geo.lng.max()");
         System.out.println(jsonPath.getString("find{it.address.geo.lng == \'" + maxLngStr + "\'}.name"));
-
-
 
         // Вивести на екран name в якого найдовша catchPhrase
         System.out.println("\nВивести на екран name в якого найдовша catchPhrase");
