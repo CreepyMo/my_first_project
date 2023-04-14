@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="First run">
         <classes>
-            <class name="homework_lesson_24.RozetkaTests"/>
+            <class name="finalAutomationFramework.tests.RozetkaTest"/>
         </classes>
     </test>
 </suite>

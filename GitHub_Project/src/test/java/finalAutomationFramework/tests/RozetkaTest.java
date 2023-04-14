@@ -1,6 +1,9 @@
 package finalAutomationFramework.tests;
 
+import com.google.common.base.Verify;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -39,7 +42,7 @@ public class RozetkaTest extends BaseTest {
         }
     }
 
-    @Test
+    @Test(description = "Check that correct checkbox is selected considering set screen size value")
     public void checkParticularScreenSize() {
         double screenSizeToTest = Double.parseDouble(getPropertyValue("screen_size"));
 
@@ -68,7 +71,5 @@ public class RozetkaTest extends BaseTest {
                 break;
             }
         }
-
-
     }
 }
