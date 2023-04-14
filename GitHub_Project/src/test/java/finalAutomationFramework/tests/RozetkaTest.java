@@ -59,7 +59,7 @@ public class RozetkaTest extends BaseTest {
             if (from <= screenSizeToTest && screenSizeToTest <= to) {
                 mobilePhonesPage.getScreenSizesList().get(i).click();
                 Assert.assertTrue(mobilePhonesPage.getHeadingText().contains(from.toString())
-                || mobilePhonesPage.getHeadingText().contains(to.toString()));
+                        || mobilePhonesPage.getHeadingText().contains(to.toString()));
 
                 String screenSize = mobilePhonesPage
                         .clickFirstPhone()
