@@ -1,6 +1,7 @@
 package finalAutomationFramework.pages;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 import static org.apache.commons.lang3.RegExUtils.replaceAll;
 
@@ -47,6 +49,14 @@ public class MobilePhonesPage extends BasePage {
                 ExpectedConditions.attributeContains(fiveAndHalfToSixInchesScreenSizeCheckbox, "class", "checked"),
                 ExpectedConditions.attributeContains(fiveAndHalfToSixInchesScreenSizeCheckbox, "class", "active"))
         );
+        wait.until(new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                while(driver.findElement(By.xpath("//h1[contains(@class, 'catalog-heading')]")).getText()
+                        .equals("Мобільні телефони")) {continue;}
+                return true;
+            }
+        });
         return this;
     }
 

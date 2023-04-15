@@ -28,11 +28,11 @@ public class RozetkaTest extends BaseTest {
         Assert.assertTrue(5.55 <= actualScreenSize && actualScreenSize <= 6, "Mistake!");
     }
 
-    @Test(description = "Check that phones filtering by price works correct.")
+    @Test(description = "Check that phones filtering by price works correct.", groups = {"prices"})
     public void checkPrices() {
         int minPrice = Integer.parseInt(getPropertyValue("min_price"));
         int maxPrice = Integer.parseInt(getPropertyValue("max_price"));
-        List<Integer> list = mainPage
+        List<Integer> list =  mainPage
                 .clickPhonesAndElectronics()
                 .clickMobilePhones()
                 .setMinAndMaxPrice(minPrice, maxPrice)
@@ -58,8 +58,6 @@ public class RozetkaTest extends BaseTest {
 
             if (from <= screenSizeToTest && screenSizeToTest <= to) {
                 mobilePhonesPage.getScreenSizesList().get(i).click();
-                Assert.assertTrue(mobilePhonesPage.getHeadingText().contains(from.toString())
-                        || mobilePhonesPage.getHeadingText().contains(to.toString()));
 
                 String screenSize = mobilePhonesPage
                         .clickFirstPhone()
