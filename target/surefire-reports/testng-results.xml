@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-14T23:08:03 EEST" name="All Test Suite" finished-at="2023-04-14T23:09:36 EEST" duration-ms="93413">
+    <groups>
+    </groups>
+    <test started-at="2023-04-14T23:08:03 EEST" name="First run" finished-at="2023-04-14T23:09:36 EEST" duration-ms="93413">
+      <class name="finalAutomationFramework.tests.RozetkaTest">
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:08:03 EEST" name="initBrowser" finished-at="2023-04-14T23:08:15 EEST" duration-ms="11554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method is-config="true" signature="openRztk()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:08:15 EEST" name="openRztk" finished-at="2023-04-14T23:08:32 EEST" depends-on-methods="finalAutomationFramework.tests.BaseTest.initBrowser" duration-ms="17652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openRztk -->
+        <test-method signature="checkPrices()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:08:32 EEST" name="checkPrices" description="Check that phones filtering by price works correct." finished-at="2023-04-14T23:08:55 EEST" duration-ms="22848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPrices -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:08:55 EEST" name="tearDown" finished-at="2023-04-14T23:08:55 EEST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:08:55 EEST" name="initBrowser" finished-at="2023-04-14T23:09:00 EEST" duration-ms="5062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method is-config="true" signature="openRztk()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:09:00 EEST" name="openRztk" finished-at="2023-04-14T23:09:15 EEST" depends-on-methods="finalAutomationFramework.tests.BaseTest.initBrowser" duration-ms="14224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openRztk -->
+        <test-method signature="checkScreenSize()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:09:15 EEST" name="checkScreenSize" description="Check that phones filtering by screen size works correct." finished-at="2023-04-14T23:09:36 EEST" duration-ms="21719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkScreenSize -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:finalAutomationFramework.tests.RozetkaTest@588ffeb]" started-at="2023-04-14T23:09:36 EEST" name="tearDown" finished-at="2023-04-14T23:09:36 EEST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- finalAutomationFramework.tests.RozetkaTest -->
+    </test> <!-- First run -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
